@@ -1,207 +1,259 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Центр технической поддержки"
-	})
-	<body>
-		<div class="wrapper">
-			<header class="header-checking">
-				<div class='_container'>
-					<div class="header-checking__body">
-						<a href="https://info-center.by/" class="logo-checking" target="_blank">
-							<img src="./img/logo-info-center.svg" alt="" class="img-fluid" />
-							<span class="logo-checking__name">
-								Разработка сервиса:<br> Информационно-издательский центр по налогам и сборам
-							</span>
-						</a>
-						<div class="header-checking__text ml-3">
-							Сегодня проверено чеков:
-							<span class="checked-today">108</span>
-						</div>
-					</div>
+@@include('_head.html',{
+"title":"Центр технической поддержки"
+})
 
+<body>
+	<div class="wrapper">
+		<header class="header-checking">
+			<div class='_container'>
+				<div class="header-checking__body">
+					<a href="https://info-center.by/" class="logo-checking" target="_blank">
+						<img src="./img/logo-info-center.svg" alt="" class="img-fluid" />
+						<span class="logo-checking__name">
+							Разработка сервиса:<br> Информационно-издательский центр по налогам и сборам
+						</span>
+					</a>
+					<div class="header-checking__text ml-3">
+						Сегодня проверено чеков:
+						<span class="checked-today">108</span>
+					</div>
 				</div>
-			</header>
-			<main class="page">
-				<section class="info-checking">
-					<div class='_container'>
-						<div class="info-checking__body">
-							<div class="info-checking__content">
-								<h1 class="info-checking__title">Проверка чека покупателем</h1>
-								<div class="info-checking__text">Проверка чека покупателем — это официальный сервис налоговых органов для онлайн-проверки чеков покупателями.</div>
-								<div class="info-checking__app">
-									<a href="https://play.google.com/store/apps/details?id=by.softclub.taxescheck&pli=1" target="_blank">
-										<img src="./img/google-play.svg" alt="google-play">
-									</a>
-									<a href="https://apps.apple.com/app/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%87%D0%B5%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%BC/id1605798468" target="_blank">
-										<img src="./img/app-store.svg" alt="app-store.svg">
-									</a>
-								</div>
+
+			</div>
+		</header>
+		<main class="page">
+			<section class="info-checking">
+				<div class='_container'>
+					<div class="info-checking__body">
+						<div class="info-checking__content">
+							<h1 class="info-checking__title">Проверка чека покупателем</h1>
+							<div class="info-checking__text">Проверка чека покупателем — это официальный сервис
+								налоговых органов для онлайн-проверки чеков покупателями.</div>
+							<div class="info-checking__app">
+								<a href="https://play.google.com/store/apps/details?id=by.softclub.taxescheck&pli=1"
+									target="_blank">
+									<img src="./img/google-play.svg" alt="google-play">
+								</a>
+								<a href="https://apps.apple.com/app/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%87%D0%B5%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%BC/id1605798468"
+									target="_blank">
+									<img src="./img/app-store.svg" alt="app-store.svg">
+								</a>
 							</div>
-							<div class="info-checking__img">
-								<img src="./img/info-checking1.png" alt="" class="img-fluid">
-							</div>
+						</div>
+						<div class="info-checking__img">
+							<img src="./img/info-checking1.png" alt="" class="img-fluid">
 						</div>
 					</div>
-				</section>
-				<section class="checking">
-					<div class='_container'>
-						<div class="checking__info">
-							<h3 class="checking__title">Проверьте чек прямо сейчас</h3>
-							<div class="checking__text">После получения кассового чека проверьте в режиме онлайн факт его передачи в систему контроля кассового оборудования, владельцем которой является Министерство по налогам и сборам Республики Беларусь. Введите реквизиты чека в форму и нажмите “Проверить чек”. Результат проверки сразу отобразится на экране.</div>
+				</div>
+			</section>
+			<section class="checking">
+				<div class='_container'>
+					<div class="checking__info">
+						<h3 class="checking__title">Проверьте чек прямо сейчас</h3>
+						<div class="checking__text">После получения кассового чека проверьте в режиме онлайн факт
+							его передачи в систему контроля кассового оборудования, владельцем которой является
+							Министерство по налогам и сборам Республики Беларусь. Введите реквизиты чека в форму
+							и нажмите “Проверить чек”. Результат проверки сразу отобразится на экране.</div>
+					</div>
+					<div class="checking__nav-tab">
+						<div class="checking-nav-tab nav mb-4" id="nav-tab" role="tablist">
+							<button class="checking-nav-tab__link active" id="by-id-tab" data-toggle="tab"
+								data-target="#by-id" type="button" role="tab" aria-controls="by-id"
+								aria-selected="true">По уникальному идентификатору</button>
+							<button class="checking-nav-tab__link" id="by-number-tab" data-toggle="tab"
+								data-target="#by-number" type="button" role="tab" aria-controls="by-number"
+								aria-selected="false">По номеру кассы</button>
 						</div>
-						<div class="checking__nav-tab">
-							<div class="checking-nav-tab nav mb-4" id="nav-tab" role="tablist">
-							  <button class="checking-nav-tab__link active" id="by-id-tab" data-toggle="tab" data-target="#by-id" type="button" role="tab" aria-controls="by-id" aria-selected="true">По уникальному идентификатору</button>
-							  <button class="checking-nav-tab__link" id="by-number-tab" data-toggle="tab" data-target="#by-number" type="button" role="tab" aria-controls="by-number" aria-selected="false">По номеру кассы</button>
+						<div class="tab-content" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="by-id" role="tabpanel"
+								aria-labelledby="by-id-tab">
+								<form action="/" id="ByUniqueIdentifier" class="form-checking">
+									<div class="form-checking__line">
+										<div class="input">
+											<div class="input__wrapper">
+												<div class="input__line">
+													<div class="input__label">Дата *</div>
+												</div>
+												<input type="date" id="date" class="_required" />
+												<div class="input__helper">
+													<div class="input__error">
+														<div class="input__text-error">Поле не может быть
+															пустым</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="form-checking__line">
+										<div class="input">
+											<div class="input__wrapper">
+												<div class="input__line">
+													<div class="input__label">Уникальный идентификатор *
+													</div>
+													<button type="button" onclick="showModal('error')"
+														class="button-modal">
+														<i class="bi bi-info-circle"></i>
+													</button>
+												</div>
+												<div class="qr-inp">
+													<input type="uniqueId" id="uniqueId"
+														class="_required " />
+													<div class="qr-inp__btn btn-qr-code"><i
+															class="bi bi-camera-fill"></i>
+													</div>
+												</div>
+
+
+
+												<div class="input__helper">
+													<div class="input__error">
+														<div class="input__text-error">Поле не может быть
+															пустым</div>
+													</div>
+													<div class="input__help-text qr-text">0/24</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="form-checking__button">
+										<button type="button" disabled>Проверить чек</button>
+									</div>
+								</form>
 							</div>
-							<div class="tab-content" id="nav-tabContent">
-								<div class="tab-pane fade show active" id="by-id" role="tabpanel" aria-labelledby="by-id-tab">
-									<form action="/" id="ByUniqueIdentifier" class="form-checking">
-										<div class="form-checking__line">
-											<div class="input">
-												<div class="input__wrapper">
-													<input type="date" id="date" class="_required" />
+							<div class="tab-pane fade" id="by-number" role="tabpanel"
+								aria-labelledby="by-number-tab">
+								<form action="/" id="byCheckoutNumber" class="form-checking">
+									<div class="form-checking__line">
+										<div class="input">
+											<div class="input__wrapper">
+												<div class="input__line">
 													<div class="input__label">Дата *</div>
-													<div class="input__helper">
-														<div class="input__error">
-															<div class="input__text-error">Поле не может быть пустым</div>
-														</div>
+												</div>
+												<input type="date" id="register" class="_required" />
+
+												<div class="input__helper">
+													<div class="input__error">
+														<div class="input__text-error">Поле не может быть
+															пустым</div>
 													</div>
 												</div>
 											</div>
-											<button type="button" onclick="showModal('info', './img/check-01.jpg')" class="button-modal" title="Добавить в закладки">
-												<i class="bi bi-info-circle"></i>
-											</button>
 										</div>
-										<div class="form-checking__line">
-											<div class="input">
-												<div class="input__wrapper">
-													<input type="uniqueId" id="uniqueId" class="_required" />
-													<div class="input__label">Уникальный идентификатор *</div>
-													<div class="btn-qr-code"><i class="bi bi-qr-code-scan"></i></div>
-													<div class="input__helper">
-														<div class="input__error">
-															<div class="input__text-error">Поле не может быть пустым</div>
-														</div>
-														<div class="input__help-text">0/24</div>
-													</div>
-												</div>
-											</div>
-											<button type="button" onclick="showModal('error')" class="button-modal" title="Добавить в закладки">
-												<i class="bi bi-info-circle"></i>
-											</button>
-										</div>
-										<div class="form-checking__button">
-											<button type="button" disabled>Проверить чек</button>
-										</div>
-									</form>
-								</div>
-								<div class="tab-pane fade" id="by-number" role="tabpanel" aria-labelledby="by-number-tab">
-									<form action="/" id="byCheckoutNumber" class="form-checking">
-										<div class="form-checking__line">
-											<div class="input">
-												<div class="input__wrapper">
-													<input type="date" id="register" class="_required" />
-													<div class="input__label">Дата *</div>
-													<div class="input__helper">
-														<div class="input__error">
-															<div class="input__text-error">Поле не может быть пустым</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<button type="button" onclick="showModal('info', './img/check-02.jpg')" class="button-modal" title="Добавить в закладки">
-												<i class="bi bi-info-circle"></i>
-											</button>
-										</div>
-										<div class="form-checking__line">
-											<div class="input">
-												<div class="input__wrapper">
-													<input type="text" id="checkoutNumber" class="_required" />
+									</div>
+									<div class="form-checking__line">
+										<div class="input">
+											<div class="input__wrapper">
+												<div class="input__line">
 													<div class="input__label">Номер кассы *</div>
-													<div class="input__helper">
-														<div class="input__error">
-															<div class="input__text-error">Поле не может быть пустым</div>
-														</div>
-														<div class="input__help-text">0/9</div>
+													<button type="button"
+														onclick="showModal('info', './img/check-02.jpg')"
+														class="button-modal">
+														<i class="bi bi-info-circle"></i>
+													</button>
+												</div>
+												<input type="text" id="checkoutNumber" class="_required" />
+												<div class="input__helper">
+													<div class="input__error">
+														<div class="input__text-error">Поле не может быть
+															пустым</div>
 													</div>
+													<div class="input__help-text">0/9</div>
 												</div>
 											</div>
-											<button type="button" onclick="showModal('info', './img/check-02.jpg')" class="button-modal" title="Добавить в закладки">
-												<i class="bi bi-info-circle"></i>
-											</button>
 										</div>
-										<div class="form-checking__line">
-											<div class="input">
-												<div class="input__wrapper">
-													<input type="text" id="paymentDocumentNumber" class="_required" />
-													<div class="input__label">Номер платежного документа *</div>
-													<div class="input__helper">
-														<div class="input__error">
-															<div class="input__text-error">Поле не может быть пустым</div>
-														</div>
-														<div class="input__help-text">0/10</div>
+
+									</div>
+									<div class="form-checking__line">
+										<div class="input">
+											<div class="input__wrapper">
+												<div class="input__line">
+													<div class="input__label">Номер платежного документа *
 													</div>
+													<button type="button"
+														onclick="showModal('info', './img/check-02.jpg')"
+														class="button-modal">
+														<i class="bi bi-info-circle"></i>
+													</button>
+												</div>
+												<input type="text" id="paymentDocumentNumber"
+													class="_required" />
+												<div class="input__helper">
+													<div class="input__error">
+														<div class="input__text-error">Поле не может быть
+															пустым</div>
+													</div>
+													<div class="input__help-text">0/10</div>
 												</div>
 											</div>
-											<button type="button" onclick="showModal('info', './img/check-02.jpg')" class="button-modal" title="Добавить в закладки">
-												<i class="bi bi-info-circle"></i>
-											</button>
 										</div>
-										<div class="form-checking__line">
-											<div class="input">
-												<div class="input__wrapper">
-													<input type="text" id="amountPayable" class="_required" />
+
+									</div>
+									<div class="form-checking__line">
+										<div class="input">
+											<div class="input__wrapper">
+												<div class="input__line">
 													<div class="input__label">Сумма к оплате *</div>
-													<div class="input__helper">
-														<div class="input__error">
-															<div class="input__text-error">Поле не может быть пустым</div>
-														</div>
+													<button type="button"
+														onclick="showModal('info', './img/check-02.jpg')"
+														class="button-modal">
+														<i class="bi bi-info-circle"></i>
+													</button>
+												</div>
+												<input type="text" id="amountPayable" class="_required" />
+
+												<div class="input__helper">
+													<div class="input__error">
+														<div class="input__text-error">Поле не может быть
+															пустым</div>
 													</div>
 												</div>
 											</div>
-											<button type="button" onclick="showModal('info', './img/check-02.jpg')" class="button-modal" title="Добавить в закладки">
-												<i class="bi bi-info-circle"></i>
-											</button>
 										</div>
-										<div class="form-checking__button">
-											<button type="button">Проверить чек</button>
-										</div>
-									</form>
-								</div>
+
+									</div>
+									<div class="form-checking__button">
+										<button type="button">Проверить чек</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
-				</section>
-			</main>
-			<div class="footer-checking">
-				<div class='_container'>
-					<div class="footer-checking__body">
-						<a href="https://info-center.by/" class="logo-checking" target="_blank">
-							<img src="./img/logo-info-center.svg" alt="" class="img-fluid" />
-							<span class="logo-checking__name">
-								Разработка сервиса:<br> Информационно-издательский центр по налогам и сборам
-							</span>
-						</a>
-						<a href="https://info-center.by/" class="logo-checking" target="_blank">info-center.by</a>
-					</div>
+				</div>
+			</section>
+		</main>
+		<div class="footer-checking">
+			<div class='_container'>
+				<div class="footer-checking__body">
+					<a href="https://info-center.by/" class="logo-checking" target="_blank">
+						<img src="./img/logo-info-center.svg" alt="" class="img-fluid" />
+						<span class="logo-checking__name">
+							Разработка сервиса:<br> Информационно-издательский центр по налогам и сборам
+						</span>
+					</a>
+					<a href="https://info-center.by/" class="logo-checking" target="_blank">info-center.by</a>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="modal fade" id="modalChecking" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
-			<div class="modal-checking modal-dialog modal-dialog-centered">
-				<div class="modal-checking__content modal-content">
-					<button type="button" class="modal-checking__button-close" data-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-					<div class="modal-checking__img">
-						<img src="" alt="" class="img-fluid">
-					</div>
-					<div class="modal-checking__info"></div>
+	<div class="modal fade" id="modalChecking" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
+		<div class="modal-checking modal-dialog modal-dialog-centered">
+			<div class="modal-checking__content modal-content">
+				<button type="button" class="modal-checking__button-close" data-dismiss="modal"
+					aria-label="Close"><i class="bi bi-x-lg"></i></button>
+				<div class="modal-checking__img">
+					<img src="" alt="" class="img-fluid">
 				</div>
+				<div class="modal-checking__info"></div>
 			</div>
 		</div>
+	</div>
 
-		@@include('_js.html',{})
-	</body>
+	@@include('_js.html',{})
+</body>
+
 </html>
