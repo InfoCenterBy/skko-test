@@ -1,3 +1,13 @@
+body{
+  background: $color-white;
+}
+main{
+  section{
+    position: relative;
+    z-index: 10;
+  }
+}
+
 .header-checking {
   padding: 25px 0px;
   background-color: $color-beige;
@@ -113,10 +123,22 @@
   }
 }
 .checking {
-  padding: 0px 0px 70px 0px;
   height: 100%;
   background-color: $color-white;
+  position: relative;
+  
+  ._container{
+    position: relative;
+    z-index: 10;
+    background-color: $color-white;
+    max-width: 1364px;
+    width: 100%;
+    padding: 0px 0px 70px 0px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
 
+  }
   // .checking__info
   &__info {
     text-align: center;
@@ -415,6 +437,8 @@
 .footer-checking {
   padding: 40px 0px;
   background-color: #D9D9D9;
+  position: relative;
+  z-index: 10;
   // .footer-checking__body
   &__body {
     display: flex;
@@ -429,5 +453,12 @@
 
   @media (max-width: 768px) {
     padding: 20px 0px;
+  }
+}
+
+.no-check{
+  margin-top: 170px;
+  .checking__text, .info-checking__title{
+    text-align: left;
   }
 }
