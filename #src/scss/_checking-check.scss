@@ -9,7 +9,7 @@ main{
 }
 
 .header-checking {
-  padding: 25px 0px;
+  padding: 12px 0px 12px 0px;
   background-color: $color-beige;
   // .header-checking__body
   &__body {
@@ -26,6 +26,18 @@ main{
   
   @media (max-width: 768px) {
     padding: 15px 0px;
+    .logo-checking__name{
+      display: none;
+    }
+  }
+  .form-checking__button {
+    @include adaptiv-value("max-width", 306, 210, 1);
+    // max-width: 306px;
+    width: 100%;
+    margin: 0;
+    button{
+      @include adaptiv-value("font-size", 18, 14, 1);
+    }
   }
 }
 .logo-checking {
@@ -35,12 +47,22 @@ main{
   // .logo-checking__name
   &__name {
     margin: 0px 30px 0px 30px;
+  }
+ 
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .footer-checking__body{
+    .img-fluid{
       display: none;
-    }
+      }
+  }
+  
+  .logo-checking__name{
+    margin: 0;
   }
 }
+
 .checked-today {
   color: #F18D42;
 }
@@ -115,11 +137,22 @@ main{
     &__text {
       margin: 0px 0px 35px 0px;
     }
-
-    &__app,
+    .info-checking{
+      &__app{
+        display: none;
+      }
+    }
     &__img {
       display: none;
     }
+  }
+}
+.form-checking__button{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  button{
+    max-width: 306px;
   }
 }
 .checking {
@@ -139,6 +172,7 @@ main{
     border-radius: 16px;
 
   }
+  
   // .checking__info
   &__info {
     text-align: center;
@@ -169,9 +203,20 @@ main{
   
   @media (max-width: 768px) {
     padding: 0px 0px 40px 0px;
-
+    
     &__info {
       display: none;
+    }
+  }
+  .form-checking__button{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 778px) {
+  .checking{
+    ._container{
+      border: none;
+      box-shadow: none;
     }
   }
 }
@@ -444,6 +489,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color:#9E9E9E;
   }
 
   // .footer-checking__text
@@ -454,11 +500,26 @@ main{
   @media (max-width: 768px) {
     padding: 20px 0px;
   }
+  &{
+    .info-checking__app{
+      a{
+        height: 100%;
+        img{
+        max-width: 179px;
+        max-height: 60px;
+        height: 60px;
+        }
+      }
+    }
+  }
 }
 
 .no-check{
-  margin-top: 170px;
+  @include adaptiv-value("margin-top", 170, 30, 1);
   .checking__text, .info-checking__title{
     text-align: left;
+  }
+  img{
+    max-width: 443px;
   }
 }
