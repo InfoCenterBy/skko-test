@@ -1219,8 +1219,17 @@ body._lock {
   color: #2B9040;
 }
 
+body {
+  background: #FCFCFC;
+}
+
+main section {
+  position: relative;
+  z-index: 10;
+}
+
 .header-checking {
-  padding: 25px 0px;
+  padding: 12px 0px 12px 0px;
   background-color: #F6F6F6;
 }
 .header-checking__body {
@@ -1236,6 +1245,27 @@ body._lock {
   .header-checking {
     padding: 15px 0px;
   }
+  .header-checking .logo-checking__name {
+    display: none;
+  }
+}
+.header-checking .form-checking__button {
+  max-width: 306px;
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 1440px) {
+  .header-checking .form-checking__button {
+    max-width: calc(210px + 96 * ((100vw - 320px) / 1120));
+  }
+}
+.header-checking .form-checking__button button {
+  font-size: 18px;
+}
+@media (max-width: 1440px) {
+  .header-checking .form-checking__button button {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1120));
+  }
 }
 
 .logo-checking {
@@ -1246,12 +1276,16 @@ body._lock {
 .logo-checking__name {
   margin: 0px 30px 0px 30px;
 }
+
 @media (max-width: 768px) {
-  .logo-checking__name {
+  .footer-checking__body .img-fluid {
     display: none;
   }
-}
 
+  .logo-checking__name {
+    margin: 0;
+  }
+}
 .checked-today {
   color: #F18D42;
 }
@@ -1309,15 +1343,38 @@ body._lock {
   .info-checking__text {
     margin: 0px 0px 35px 0px;
   }
-  .info-checking__app, .info-checking__img {
+  .info-checking .info-checking__app {
+    display: none;
+  }
+  .info-checking__img {
     display: none;
   }
 }
 
+.form-checking__button {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.form-checking__button button {
+  max-width: 306px;
+}
+
 .checking {
-  padding: 0px 0px 70px 0px;
   height: 100%;
   background-color: #FCFCFC;
+  position: relative;
+}
+.checking ._container {
+  position: relative;
+  z-index: 10;
+  background-color: #FCFCFC;
+  max-width: 1364px;
+  width: 100%;
+  padding: 0px 0px 70px 0px;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
 }
 .checking__info {
   text-align: center;
@@ -1347,7 +1404,16 @@ body._lock {
     display: none;
   }
 }
+.checking .form-checking__button {
+  justify-content: center;
+}
 
+@media screen and (max-width: 778px) {
+  .checking ._container {
+    border: none;
+    box-shadow: none;
+  }
+}
 .checking-nav-tab {
   padding: 7px;
   flex-wrap: nowrap;
@@ -1376,6 +1442,7 @@ body._lock {
   width: 100%;
   max-width: 620px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 .form-checking__line {
   margin: 0px 0px 44px 0px;
@@ -1386,7 +1453,7 @@ body._lock {
   flex: 1 1 auto;
 }
 .form-checking__line .button-modal {
-  margin: 3px 0px 0px 10px;
+  margin: 0px 0px 0px 5px;
 }
 .form-checking__line .button-modal i {
   font-size: 18px;
@@ -1417,35 +1484,24 @@ body._lock {
 .input__wrapper {
   position: relative;
 }
-.input__wrapper .btn-qr-code {
-  padding: 2px;
-  background-color: #FCFCFC;
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: 2;
-  cursor: pointer;
-}
-.input__wrapper .btn-qr-code i {
-  font-size: 18px;
-  color: #272727;
-}
 .input__label {
   max-width: calc(100% - (16px * 2));
-  min-width: 130px;
   width: auto;
   margin: 0;
   padding: 0 4px;
   font-size: 16px;
   background-color: #FCFCFC;
-  position: absolute;
-  left: 15px;
-  top: 20px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   pointer-events: none;
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input__line {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 4px;
 }
 .input input {
   width: 100%;
@@ -1455,19 +1511,42 @@ body._lock {
   border-radius: 8px;
   outline: none;
 }
-.input input:-webkit-autofill, .input input:-webkit-autofill:hover, .input input:-webkit-autofill:focus, .input input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #FCFCFC inset !important;
-}
-.input input.has-value, .input input:focus {
-  border: 1px solid #F18D42;
-}
-.input input.has-value ~ .input__label, .input input:focus ~ .input__label {
-  min-width: auto;
-  color: #F18D42;
-  transform: translateY(-31px) translatex(-5px);
-}
 .input input:disabled {
   background-color: #9E9E9E;
+}
+.input .qr-inp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input .qr-inp input {
+  width: 100%;
+}
+.input .qr-inp__btn {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-width: 56px;
+  height: 56px;
+  background: #F18D42;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  margin-left: 17px;
+  cursor: pointer;
+  transition: all ease-in 0.2s;
+}
+.input .qr-inp__btn .bi-camera-fill::before {
+  font-size: 24px;
+  color: #FFFFFF;
+  transition: all ease-in 0.2s;
+}
+.input .qr-inp__btn:hover {
+  background: #FFFFFF;
+  border: 1px solid #F18D42;
+}
+.input .qr-inp__btn:hover .bi-camera-fill::before {
+  color: #F18D42;
 }
 .input__helper {
   font-size: 12px;
@@ -1486,6 +1565,9 @@ body._lock {
 .input__help-text {
   color: #9E9E9E;
   text-align: right;
+}
+.input .qr-text {
+  margin-right: 68px;
 }
 .input__text-error {
   display: none;
@@ -1550,11 +1632,14 @@ body._lock {
 .footer-checking {
   padding: 40px 0px;
   background-color: #D9D9D9;
+  position: relative;
+  z-index: 10;
 }
 .footer-checking__body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #9E9E9E;
 }
 .footer-checking__text {
   color: #9E9E9E;
@@ -1563,4 +1648,111 @@ body._lock {
   .footer-checking {
     padding: 20px 0px;
   }
+}
+.footer-checking .info-checking__app a {
+  height: 100%;
+}
+.footer-checking .info-checking__app a img {
+  max-width: 179px;
+  max-height: 60px;
+  height: 60px;
+}
+
+.no-check {
+  margin-top: 170px;
+}
+@media (max-width: 1440px) {
+  .no-check {
+    margin-top: calc(30px + 140 * ((100vw - 320px) / 1120));
+  }
+}
+.no-check .checking__text, .no-check .info-checking__title {
+  text-align: left;
+}
+.no-check img {
+  max-width: 443px;
+}
+
+.form-container .form-header h1 {
+  font-size: 64px;
+  font-weight: 600;
+}
+@media (max-width: 1440px) {
+  .form-container .form-header h1 {
+    font-size: calc(36px + 28 * ((100vw - 320px) / 1120));
+  }
+}
+.form-container .form-header .checking__text {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 1440px) {
+  .form-container .form-header .checking__text {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 1120));
+  }
+}
+.form-container ._container {
+  max-width: 879px;
+}
+.form-container .form-section {
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  padding-top: 34px;
+  padding-bottom: 45px;
+}
+.form-container form select, .form-container form textarea, .form-container form .label-file {
+  width: 100%;
+  padding: 18px 16px;
+  border: 1px solid #9E9E9E;
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  outline: none;
+}
+.form-container form select:disabled, .form-container form textarea:disabled, .form-container form .label-file:disabled {
+  background-color: #9E9E9E;
+}
+.form-container form textarea {
+  max-height: 200px;
+  overflow: hidden;
+}
+.form-container form .input-info {
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.form-container form label {
+  cursor: pointer;
+}
+.form-container form #upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.form-container form .form-checking__button {
+  margin: 0;
+  max-width: 306px;
+}
+.form-container form select {
+  border: 0;
+  outline: 1px solid #9E9E9E;
+  border-right: 16px solid transparent;
+}
+.form-container form .input__label {
+  background: transparent;
+}
+
+/* ---- reset ---- */
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
 }
