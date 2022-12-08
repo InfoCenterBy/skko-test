@@ -16,22 +16,24 @@
                               </span>
                          </a>
                          <div class="form-checking__button ml-3">
-                              <button type="button">Создать обращение</button>
+                              <button type="button" onclick="location.href='/checking-check.html';">Вернуться на
+                                   главную</button>
                          </div>
                     </div>
 
                </div>
           </header>
           <main class="page form-container mt-5">
-               <div id="particles-js">
-               </div>
+
                <section class="_container px-3 text-center form-header">
                     <h1>Отправить обращение</h1>
                     <div class="checking__text">Через форму обратной связи можете оставить сообщение, если Вам не выдали
                          чек или чек не найден длительное время (более трех месяцев)
                     </div>
                </section>
-               <section class="_container px-3 form-section">
+               <div id="particles-js">
+               </div>
+               <section class="_container px-4 form-section">
 
                     <form action="" id="form-msg">
                          <div class="input">
@@ -79,9 +81,10 @@
                                         <div class="input__label">Прикрепить изображение</div>
                                    </div>
                                    <label for="upload-photo"
-                                        class="label-file w-100 d-flex flex-row justify-content-between"><span>Прикрепить
+                                        class="label-file w-100 d-flex flex-row justify-content-between"><span
+                                             id="file-name">Прикрепить
                                              изображение</span> <i class="bi bi-paperclip"></i></label>
-                                   <input type="file" name="photo" id="upload-photo" />
+                                   <input type="file" name="photo" id="upload-photo" onchange="uploadFile(this)" />
                                    <div class="input__helper">
                                         <div class="input__error">
                                              <div class="input__text-error">Поле не может

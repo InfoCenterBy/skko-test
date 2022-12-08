@@ -525,6 +525,9 @@ main{
 }
 
 .form-container{
+  #particles-js{
+    // height: 130vh;
+  }
   .form-header{
     h1{
       @include adaptiv-value("font-size", 64, 36, 1);
@@ -583,6 +586,9 @@ main{
       border: 0;
       outline: 1px solid #9E9E9E;
       border-right: 16px solid transparent;
+    }
+    .input__label{
+      background: transparent;
     }
   }
 }

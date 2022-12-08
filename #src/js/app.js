@@ -333,4 +333,9 @@ particlesJS("particles-js",
 
 function resetMSG(){
 	document.querySelector("#form-msg").reset();
+	document.getElementById("file-name").innerHTML = "Прикрепить изображение";
+}
+
+function uploadFile(target) {
+	document.getElementById("file-name").innerHTML = target.files[0].name;
 }
