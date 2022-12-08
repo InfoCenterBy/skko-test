@@ -549,6 +549,10 @@ main{
     padding-top: 34px;
     padding-bottom: 45px;
   }
+  .form-section>span{
+    font-weight: 600;
+    font-size: 24px;
+  }
   form{
     select, textarea,.label-file{
       width: 100%;
@@ -590,5 +594,51 @@ main{
     .input__label{
       background: transparent;
     }
+    .tel-send{
+      .tel-inp{
+        width: 100%;
+        max-width: 100%;
+      }
+      .form-checking__button{
+        max-width: 196px;
+        max-height: 58px;
+      }
+      @media (max-width: 778px) {
+        .form-checking__button{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+// .preloader{
+//   display: flex;
+//   background-color: #f3f3f3;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   width: 400px;
+//   height: 400px;
+//           left: 0;
+//           top: 0;
+//           width: 100vw;
+//           height: 100vh;
+//           z-index: 99;
+// }
+.loader {
+  border: 20px solid #FFF0EA;
+  border-top: 20px solid #F18D42;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
   }
 }

@@ -33,8 +33,8 @@
                </section>
                <div id="particles-js">
                </div>
-               <section class="_container px-4 form-section">
-
+               <section class="_container px-4 form-section text-center">
+                    <span>Шаг 2. Введите текст жалобы</span>
                     <form action="" id="form-msg">
                          <div class="input">
                               <div class="input__wrapper">
@@ -59,7 +59,7 @@
                                    </div>
                               </div>
                          </div>
-                         <div class="input mt-3">
+                         <div class="input mt-3 text-left">
                               <div class="input__wrapper">
                                    <div class="input__line">
                                         <div class="input__label">Текст сообщения*</div>
@@ -247,7 +247,65 @@
 
                     </form>
                </section>
+               <section class="_container px-4 form-section text-center mt-5">
+                    <span>Шаг 1. Введите ваши данные</span>
+                    <form action="" id="form-msg">
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Введите номер телефона*</div>
+                                   </div>
+                                   <div
+                                        class="d-flex flex-column flex-lg-row flex-md-row tel-send justify-content-between align-items-start w-100">
+                                        <div class="text-left d-flex flex-column w-100 pr-lg-4 pr-md-4 pr-xs-0 mb-3">
+                                             <input type="text" id="tel-inp" class="tel-inp">
+                                             <span class="input-info">На этот номер будет отправлен код
+                                                  подтверждения</span>
+                                        </div>
+                                        <div class="form-checking__button w-100 d-flex justify-content-center">
+                                             <button type="button">Отправить код</button>
+                                        </div>
+                                   </div>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
 
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Введите код*</div>
+                                   </div>
+                                   <input type="text" id="code-inp">
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="w-100 d-flex flex-column align-items-center mt-5">
+                              <div class="form-checking__button">
+                                   <button type="button">Продолжить</button>
+                              </div>
+                         </div>
+                    </form>
+               </section>
+               <section class="_container px-4 form-section text-center mt-5">
+                    <span>Шаг 1. Введите ваши данные</span>
+                    <form action="" id="form-msg">
+                         <div class="w-100 d-flex justify-content-center mt-3">
+                              <div class="loader"></div>
+                         </div>
+                    </form>
+               </section>
           </main>
           <div class="footer-checking mt-5">
                <div class='_container'>
