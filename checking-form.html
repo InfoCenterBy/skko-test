@@ -46,8 +46,8 @@
                </section>
                <div id="particles-js">
                </div>
-               <section class="_container px-4 form-section">
-
+               <section class="_container px-4 form-section text-center">
+                    <span>Шаг 2. Введите текст жалобы</span>
                     <form action="" id="form-msg">
                          <div class="input">
                               <div class="input__wrapper">
@@ -72,7 +72,7 @@
                                    </div>
                               </div>
                          </div>
-                         <div class="input mt-3">
+                         <div class="input mt-3 text-left">
                               <div class="input__wrapper">
                                    <div class="input__line">
                                         <div class="input__label">Текст сообщения*</div>
@@ -249,7 +249,8 @@
                          </div>
                          <div class="w-100 d-flex flex-column align-items-center mt-5">
                               <div class="form-checking__button">
-                                   <button type="submit">Отправить форму</button>
+                                   <button type="button" data-bs-toggle="modal"
+                                        data-bs-target="#modalChecking">Отправить форму</button>
                               </div>
                               <div class="reset-btn mt-3">
                                    <button type="button" id="reset-msg" onclick="resetMSG()"><i
@@ -260,7 +261,65 @@
 
                     </form>
                </section>
+               <section class="_container px-4 form-section text-center mt-5">
+                    <span>Шаг 1. Введите ваши данные</span>
+                    <form action="" id="form-msg">
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Введите номер телефона*</div>
+                                   </div>
+                                   <div
+                                        class="d-flex flex-column flex-lg-row flex-md-row tel-send justify-content-between align-items-start w-100">
+                                        <div class="text-left d-flex flex-column w-100 pr-lg-4 pr-md-4 pr-xs-0 mb-3">
+                                             <input type="text" id="tel-inp" class="tel-inp">
+                                             <span class="input-info">На этот номер будет отправлен код
+                                                  подтверждения</span>
+                                        </div>
+                                        <div class="form-checking__button w-100 d-flex justify-content-center">
+                                             <button type="button">Отправить код</button>
+                                        </div>
+                                   </div>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
 
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Введите код*</div>
+                                   </div>
+                                   <input type="text" id="code-inp">
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="w-100 d-flex flex-column align-items-center mt-5">
+                              <div class="form-checking__button">
+                                   <button type="button">Продолжить</button>
+                              </div>
+                         </div>
+                    </form>
+               </section>
+               <section class="_container px-4 form-section text-center mt-5">
+                    <span>Шаг 1. Введите ваши данные</span>
+                    <form action="" id="form-msg">
+                         <div class="w-100 d-flex justify-content-center mt-3">
+                              <div class="loader"></div>
+                         </div>
+                    </form>
+               </section>
           </main>
           <div class="footer-checking mt-5">
                <div class='_container'>
@@ -297,24 +356,33 @@
      <div class="modal fade" id="modalChecking" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
           <div class="modal-checking modal-dialog modal-dialog-centered">
                <div class="modal-checking__content modal-content">
-                    <button type="button" class="modal-checking__button-close" data-dismiss="modal"
+                    <button type="button" class="modal-checking__button-close" data-bs-dismiss="modal"
                          aria-label="Close"><i class="bi bi-x-lg"></i></button>
                     <div class="modal-checking__img">
-                         <img src="" alt="" class="img-fluid">
+                         <img src="./img/mail-check.png" alt="mail-check" class="img-fluid">
                     </div>
-                    <div class="modal-checking__info"></div>
+                    <div class="w-100 d-flex flex-column align-items-center">
+                         <div class="modal-checking__title">Ваше обращение было успешно отправлено!</div>
+                         <div class="modal-checking__info">Сообщение о нарушении поступит для рассмотрения в налоговые
+                              органы. Спасибо!</div>
+                    </div>
+
                </div>
           </div>
      </div>
      <!-- Swiper -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
      crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!-- <script src="js/vendors.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
-<!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 
