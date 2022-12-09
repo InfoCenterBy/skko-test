@@ -457,6 +457,12 @@ main{
   &__info {
     text-align: center;
   }
+  &__title{
+    text-align: center;
+    max-width: 325px;
+    font-weight: 600;
+    font-size: 18px;
+  }
 
   // .modal-checking__icon
   &__img {
