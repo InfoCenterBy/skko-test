@@ -2,8 +2,10 @@
 	"name": "fls_start_gulp",
 	"version": "1.0.0",
 	"description": "Start template with Gulp",
+	"scripts": {
+		"deploy": "gh-pages -d skko-test"
+	},
 	"author": "FLS",
-	"private": true,
 	"license": "GNU General Public License (GPL)",
 	"devDependencies": {
 		"browser-sync": "latest",
@@ -13,6 +15,7 @@
 		"gulp-clean-css": "latest",
 		"gulp-file-include": "latest",
 		"gulp-fonter": "latest",
+		"gh-pages": "^4.0.0",
 		"gulp-gh-pages": "^0.5.4",
 		"gulp-group-css-media-queries": "latest",
 		"gulp-imagemin": "latest",

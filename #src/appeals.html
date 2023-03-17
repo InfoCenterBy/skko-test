@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Обращения"
+})
+
+<body>
+     <div class="wrapper">
+          <header class="header-checking">
+               <div class='_container'>
+                    <div class="header-checking__body">
+                         <a href="https://info-center.by/" class="logo-checking" target="_blank">
+                              <img src="./img/logo-info-center.svg" alt="" class="img-fluid" />
+                              <span class="logo-checking__name">
+                                   Разработка сервиса:<br> Информационно-издательский центр по налогам и сборам
+                              </span>
+                         </a>
+                         <div class="row header-checking__links">
+                              <a href="" class="mx-3  header-checking-active">Главная</a>
+                              <a href="" class="mx-3">Обращения</a>
+                              <a href="" class="mx-3">Мои чеки</a>
+                              <a href="" class="mx-3">Уведомления</a>
+                              <a href="" class="mx-3">Профиль</a>
+                         </div>
+                    </div>
+
+               </div>
+          </header>
+          <main class="page form-container mt-5">
+
+               <section class="_container px-3 text-center form-header">
+                    <h1>Отправить обращение</h1>
+                    <div class="checking__text">Через форму обратной связи можете оставить сообщение, если Вам не выдали
+                         чек или чек не найден длительное время (более трех месяцев)
+                    </div>
+               </section>
+               <div id="particles-js">
+               </div>
+               <section class="_container px-4 form-section text-center">
+                    <span>Шаг 2. Введите текст жалобы</span>
+                    <form action="" id="form-msg">
+                         <div class="input">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Тип сообщения*</div>
+                                   </div>
+                                   <select class="_required" id="type-msg">
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+
+                                   </select>
+                                   <!-- <input type="text" id="checkoutNumber" > -->
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                        <!-- <div class="input__help-text">0/9</div> -->
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3 text-left">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Текст сообщения*</div>
+                                   </div>
+                                   <textarea></textarea>
+                                   <span class="input-info">Информация о продавце или любые ваши комментарии</span>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Прикрепить изображение</div>
+                                   </div>
+                                   <label for="upload-photo"
+                                        class="label-file w-100 d-flex flex-row justify-content-between"><span
+                                             id="file-name">Прикрепить
+                                             изображение</span> <i class="bi bi-paperclip"></i></label>
+                                   <input type="file" name="photo" id="upload-photo" onchange="uploadFile(this)" />
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Наименование торгового объекта*</div>
+                                   </div>
+                                   <input type="text" id="name-obj">
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Область*</div>
+                                   </div>
+                                   <select class="_required" id="region">
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+
+                                   </select>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                        <!-- <div class="input__help-text">0/9</div> -->
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Районы*</div>
+                                   </div>
+                                   <select class="_required" id="districts">
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+
+                                   </select>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                        <!-- <div class="input__help-text">0/9</div> -->
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Города; поселки г.т.; с/с*</div>
+                                   </div>
+                                   <select class="_required" id="town">
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+
+                                   </select>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                        <!-- <div class="input__help-text">0/9</div> -->
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Сельские населенные пункты*</div>
+                                   </div>
+                                   <select class="_required" id="town-point">
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+
+                                   </select>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                        <!-- <div class="input__help-text">0/9</div> -->
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Улица</div>
+                                   </div>
+                                   <select class="_required" id="street">
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+                                        <option value="">заглушка</option>
+
+                                   </select>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                        <!-- <div class="input__help-text">0/9</div> -->
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Дом</div>
+                                   </div>
+                                   <input type="text" id="name-house">
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="w-100 d-flex flex-column align-items-center mt-5">
+                              <div class="form-checking__button">
+                                   <button type="button" data-bs-toggle="modal"
+                                        data-bs-target="#modalChecking">Отправить форму</button>
+                              </div>
+                              <div class="reset-btn mt-3">
+                                   <button type="button" id="reset-msg" onclick="resetMSG()"><i
+                                             class="bi bi-trash3"></i> <span class="ms-3">Очистить
+                                             форму</span> </button>
+                              </div>
+                         </div>
+
+                    </form>
+               </section>
+               <section class="_container px-4 form-section text-center mt-5">
+                    <span>Шаг 1. Введите ваши данные</span>
+                    <div class="loader-wrapper">
+                         <div class="loader"></div>
+                    </div>
+                    <form action="" id="form-msg">
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Введите номер телефона*</div>
+                                   </div>
+                                   <div
+                                        class="d-flex flex-column flex-lg-row flex-md-row tel-send justify-content-between align-items-start w-100">
+                                        <div class="text-left d-flex flex-column w-100 pr-lg-4 pr-md-4 pr-xs-0 mb-3">
+                                             <input type="text" id="tel-inp" class="tel-inp">
+                                             <span class="input-info">На этот номер будет отправлен код
+                                                  подтверждения</span>
+                                        </div>
+                                        <div class="form-checking__button w-100 d-flex justify-content-center">
+                                             <button type="button">Отправить код</button>
+                                        </div>
+                                   </div>
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="input mt-3">
+                              <div class="input__wrapper">
+                                   <div class="input__line">
+                                        <div class="input__label">Введите код*</div>
+                                   </div>
+                                   <input type="text" id="code-inp">
+                                   <div class="input__helper">
+                                        <div class="input__error">
+                                             <div class="input__text-error">Поле не может
+                                                  быть
+                                                  пустым</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="w-100 d-flex flex-column align-items-center mt-5">
+                              <div class="form-checking__button">
+                                   <button type="button">Продолжить</button>
+                              </div>
+                         </div>
+                    </form>
+               </section>
+               <section class="_container px-4 form-section text-center mt-5">
+                    <span>Шаг 1. Введите ваши данные</span>
+                    <form action="" id="form-msg">
+                         <div class="w-100 d-flex justify-content-center mt-3">
+                              <div class="loader"></div>
+                         </div>
+                    </form>
+               </section>
+          </main>
+          <div class="footer-checking mt-5">
+               <div class='_container'>
+                    <div
+                         class="footer-checking__body d-flex align-items-center justify-content-between flex-column flex-md-row">
+                         <div class="d-flex flex-column">
+                              <a href="https://info-center.by/" class="logo-checking" target="_blank">
+                                   <img src="./img/logo-info-center.svg" alt="" class="img-fluid" />
+                                   <span class="logo-checking__name">
+                                        Разработка сервиса:<br> Информационно-издательский центр по налогам и сборам
+                                   </span>
+                              </a>
+                              <span class="mt-4">© 2022 Все права защищены</span>
+                         </div>
+                         <div class="d-flex flex-column mt-4 mt-md-0">
+                              <span class="mb-2">Мобильное приложение «Проверка чека покупателем»</span>
+                              <div class="info-checking__app">
+                                   <a href="https://play.google.com/store/apps/details?id=by.softclub.taxescheck&pli=1"
+                                        target="_blank">
+                                        <img src="./img/google-play.svg" alt="google-play">
+                                   </a>
+                                   <a href="https://apps.apple.com/app/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%87%D0%B5%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%BC/id1605798468"
+                                        target="_blank">
+                                        <img src="./img/app-store.svg" alt="app-store.svg">
+                                   </a>
+                              </div>
+                         </div>
+
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="modal fade" id="modalChecking" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
+          <div class="modal-checking modal-dialog modal-dialog-centered">
+               <div class="modal-checking__content modal-content">
+                    <button type="button" class="modal-checking__button-close" data-bs-dismiss="modal"
+                         aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                    <div class="modal-checking__img">
+                         <img src="./img/mail-check.png" alt="mail-check" class="img-fluid">
+                    </div>
+                    <div class="w-100 d-flex flex-column align-items-center">
+                         <div class="modal-checking__title">Ваше обращение было успешно отправлено!</div>
+                         <div class="modal-checking__info">Сообщение о нарушении поступит для рассмотрения в налоговые
+                              органы. Спасибо!</div>
+                    </div>
+
+               </div>
+          </div>
+     </div>
+     @@include('_js.html',{})
+</body>
+
+</html>

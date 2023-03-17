@@ -17,6 +17,21 @@ main{
     justify-content: space-between;
     align-items: center;
   }
+  
+
+  &__links{
+    color: $color-gray-link;
+    @include adaptiv-value("font-size", 18, 14, 1);
+    a:not(.header-checking-active):hover{
+      color: $color-gold-light;
+      transition: all .3s;
+    }
+  }
+  
+  .header-checking-active{
+    color: $color-gold-link;
+    border-bottom: 3px solid $color-gold-link;
+  }
 
   // .header-checking__text
   &__text {
