@@ -28,291 +28,56 @@
           </header>
           <main class="page form-container mt-5">
 
-               <section class="_container px-3 text-center form-header">
-                    <h1>Отправить обращение</h1>
-                    <div class="checking__text">Через форму обратной связи можете оставить сообщение, если Вам не выдали
-                         чек или чек не найден длительное время (более трех месяцев)
+               <section class="_container px-3 text-center form-header mb-3">
+                    <h1 class="mb-5">Обращения</h1>
+
+                    <div class="w-100 d-flex flex-row justify-content-end">
+                         <a class="form-checking-link" href="">Создать обращение</a>
                     </div>
                </section>
+
                <div id="particles-js">
                </div>
-               <section class="_container px-4 form-section text-center">
-                    <span>Шаг 2. Введите текст жалобы</span>
-                    <form action="" id="form-msg">
-                         <div class="input">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Тип сообщения*</div>
-                                   </div>
-                                   <select class="_required" id="type-msg">
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-
-                                   </select>
-                                   <!-- <input type="text" id="checkoutNumber" > -->
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                        <!-- <div class="input__help-text">0/9</div> -->
-                                   </div>
+               <section class="_container px-4 form-section text-center mt-3">
+                    <div class="letter-block row justify-content-md-between align-items-center">
+                         <div class="d-flex flex-row align-items-center">
+                              <picture>
+                                   <source media="(min-width: 650px)" srcset="/img/icons/letter.svg">
+                                   <img src="/img/icons/letter.png" alt="letter">
+                              </picture>
+                              <div class="ml-5 d-flex flex-column align-items-start">
+                                   <div class="letter-block__type">Тип сообщения</div>
+                                   <div class="letter-block__title">Не найден чек</div>
                               </div>
                          </div>
-                         <div class="input mt-3 text-left">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Текст сообщения*</div>
+                         <div class="d-flex flex-row">
+                              <div class="d-flex flex-column align-items-start mr-4">
+                                   <div class="letter-block__date">
+                                        Дата сообщения
                                    </div>
-                                   <textarea></textarea>
-                                   <span class="input-info">Информация о продавце или любые ваши комментарии</span>
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
+                                   <div class="letter-block__date-number">
+                                        19.01.2022
                                    </div>
+                              </div>
+                              <div class="d-flex flex-column align-items-start ml-4 mr-4">
+                                   <div class="letter-block__place">
+                                        Область
+                                   </div>
+                                   <div class="letter-block__place-title">
+                                        г. Минск
+                                   </div>
+                              </div>
+                              <div class="d-flex align-items-center ml-4">
+                                   <i class="bi bi-chevron-right"></i>
                               </div>
                          </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Прикрепить изображение</div>
-                                   </div>
-                                   <label for="upload-photo"
-                                        class="label-file w-100 d-flex flex-row justify-content-between"><span
-                                             id="file-name">Прикрепить
-                                             изображение</span> <i class="bi bi-paperclip"></i></label>
-                                   <input type="file" name="photo" id="upload-photo" onchange="uploadFile(this)" />
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Наименование торгового объекта*</div>
-                                   </div>
-                                   <input type="text" id="name-obj">
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Область*</div>
-                                   </div>
-                                   <select class="_required" id="region">
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-
-                                   </select>
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                        <!-- <div class="input__help-text">0/9</div> -->
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Районы*</div>
-                                   </div>
-                                   <select class="_required" id="districts">
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-
-                                   </select>
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                        <!-- <div class="input__help-text">0/9</div> -->
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Города; поселки г.т.; с/с*</div>
-                                   </div>
-                                   <select class="_required" id="town">
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-
-                                   </select>
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                        <!-- <div class="input__help-text">0/9</div> -->
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Сельские населенные пункты*</div>
-                                   </div>
-                                   <select class="_required" id="town-point">
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-
-                                   </select>
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                        <!-- <div class="input__help-text">0/9</div> -->
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Улица</div>
-                                   </div>
-                                   <select class="_required" id="street">
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-                                        <option value="">заглушка</option>
-
-                                   </select>
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                        <!-- <div class="input__help-text">0/9</div> -->
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Дом</div>
-                                   </div>
-                                   <input type="text" id="name-house">
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="w-100 d-flex flex-column align-items-center mt-5">
-                              <div class="form-checking__button">
-                                   <button type="button" data-bs-toggle="modal"
-                                        data-bs-target="#modalChecking">Отправить форму</button>
-                              </div>
-                              <div class="reset-btn mt-3">
-                                   <button type="button" id="reset-msg" onclick="resetMSG()"><i
-                                             class="bi bi-trash3"></i> <span class="ms-3">Очистить
-                                             форму</span> </button>
-                              </div>
-                         </div>
-
-                    </form>
-               </section>
-               <section class="_container px-4 form-section text-center mt-5">
-                    <span>Шаг 1. Введите ваши данные</span>
-                    <div class="loader-wrapper">
-                         <div class="loader"></div>
                     </div>
-                    <form action="" id="form-msg">
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Введите номер телефона*</div>
-                                   </div>
-                                   <div
-                                        class="d-flex flex-column flex-lg-row flex-md-row tel-send justify-content-between align-items-start w-100">
-                                        <div class="text-left d-flex flex-column w-100 pr-lg-4 pr-md-4 pr-xs-0 mb-3">
-                                             <input type="text" id="tel-inp" class="tel-inp">
-                                             <span class="input-info">На этот номер будет отправлен код
-                                                  подтверждения</span>
-                                        </div>
-                                        <div class="form-checking__button w-100 d-flex justify-content-center">
-                                             <button type="button">Отправить код</button>
-                                        </div>
-                                   </div>
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
+                    <!-- <div class="bg-dark w-100 h-50">
+                         <div class="test-path"></div>
+                    </div> -->
+               </section>
 
-                         <div class="input mt-3">
-                              <div class="input__wrapper">
-                                   <div class="input__line">
-                                        <div class="input__label">Введите код*</div>
-                                   </div>
-                                   <input type="text" id="code-inp">
-                                   <div class="input__helper">
-                                        <div class="input__error">
-                                             <div class="input__text-error">Поле не может
-                                                  быть
-                                                  пустым</div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="w-100 d-flex flex-column align-items-center mt-5">
-                              <div class="form-checking__button">
-                                   <button type="button">Продолжить</button>
-                              </div>
-                         </div>
-                    </form>
-               </section>
-               <section class="_container px-4 form-section text-center mt-5">
-                    <span>Шаг 1. Введите ваши данные</span>
-                    <form action="" id="form-msg">
-                         <div class="w-100 d-flex justify-content-center mt-3">
-                              <div class="loader"></div>
-                         </div>
-                    </form>
-               </section>
+
           </main>
           <div class="footer-checking mt-5">
                <div class='_container'>

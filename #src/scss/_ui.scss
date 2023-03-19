@@ -140,3 +140,62 @@
 		object-fit: cover;
 	}
 }
+
+#particles-js{
+	@media (max-width: 650px) {
+		display: none;
+	}
+}
+
+.form-checking-link{
+	padding: 18px 56px;
+	background: $color-gold-link;
+	border-radius: 8px;
+	color: $color-white;
+	&:hover{
+		color: $color-white;
+	}
+	margin: 10px 0;
+}
+
+
+
+.letter-block {
+	background: $color-beige;
+	padding: 24px;
+	border-radius: 8px;
+
+	&__type, &__date, &__place{
+		margin-bottom: 4px;
+		font-size: 10px;
+		line-height: 12px;
+		color: $color-gray-link;
+	}
+
+	&__type {
+	}
+
+	&__title {
+	}
+
+	&__date {
+	}
+
+	&__date-number {
+	}
+
+	&__place-title {
+	}
+
+	&__place {
+	}
+}
+
+
+.test-path{
+	max-width: 375px;
+	width: 100%;
+	height: 75px;
+	background: red;
+	clip-path: path('M200 68C224.301 68 244 48.3005 244 24C244 21.9648 243.862 19.9618 243.594 18H378C382.418 18 386 21.5817 386 26V93H11V26C11 21.5817 14.5817 18 19 18H156.406C156.138 19.9618 156 21.9648 156 24C156 48.3005 175.699 68 200 68Z');
+}
