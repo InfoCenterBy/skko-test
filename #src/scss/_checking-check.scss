@@ -26,6 +26,9 @@ main{
       color: $color-gold-light;
       transition: all .3s;
     }
+    @media (max-width: 610px) {
+      display: none;
+    }
   }
   
   .header-checking-active{
@@ -45,6 +48,7 @@ main{
       display: none;
     }
   }
+  
   .form-checking__button {
     @include adaptiv-value("max-width", 306, 210, 1);
     // max-width: 306px;
@@ -55,6 +59,18 @@ main{
     }
   }
 }
+@media (max-width: 610px) {
+  .logo-checking{
+    width: 100%;
+    justify-content: space-between;
+    text-align: right;
+  }
+  .header-checking .logo-checking__name{
+    display: block;
+    @include adaptiv-value('font-size', 16, 10, 1);
+  }
+}
+
 .logo-checking {
   display: inline-flex;
   font-size: 16px;

@@ -5,7 +5,7 @@
 })
 
 <body>
-     <div class="wrapper">
+     <div class="wrapper appeals">
           <header class="header-checking">
                <div class='_container'>
                     <div class="header-checking__body">
@@ -31,7 +31,7 @@
                <section class="_container px-3 text-center form-header mb-3">
                     <h1 class="mb-5">Обращения</h1>
 
-                    <div class="w-100 d-flex flex-row justify-content-end">
+                    <div class="w-100 d-flex flex-row justify-content-center justify-content-sm-end">
                          <a class="form-checking-link" href="">Создать обращение</a>
                     </div>
                </section>
@@ -39,19 +39,19 @@
                <div id="particles-js">
                </div>
                <section class="_container px-4 form-section text-center mt-3">
-                    <div class="letter-block row align-items-center">
-                         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center w-100">
-                              <div class="d-flex flex-row align-items-center">
+                    <a class="letter-block row align-items-center mb-4" href="">
+                         <div class="letter-block-content align-items-center">
+                              <div class="d-flex flex-row align-items-center letter-block-content__text">
                                    <picture>
                                         <source media="(min-width: 650px)" srcset="/img/icons/letter.svg">
                                         <img src="/img/icons/letter.png" alt="letter">
                                    </picture>
-                                   <div class="ml-5 d-flex flex-column align-items-start">
+                                   <div class="ml-sm-5 ml-3 d-flex flex-column align-items-start">
                                         <div class="letter-block__type">Тип сообщения</div>
                                         <div class="letter-block__title">Не найден чек</div>
                                    </div>
                               </div>
-                              <div class="d-flex flex-row">
+                              <div class="d-flex flex-row letter-block-content__text">
                                    <div class="d-flex flex-column align-items-start mr-4">
                                         <div class="letter-block__date">
                                              Дата сообщения
@@ -60,7 +60,7 @@
                                              19.01.2022
                                         </div>
                                    </div>
-                                   <div class="d-flex flex-column align-items-start ml-4 mr-4">
+                                   <div class="d-flex flex-column align-items-start ml-sm-4 mr-sm-4">
                                         <div class="letter-block__place">
                                              Область
                                         </div>
@@ -75,14 +75,104 @@
                          <div class="d-flex align-items-center ml-4">
                               <i class="bi bi-chevron-right"></i>
                          </div>
-                    </div>
-                    <!-- <div class="bg-dark w-100 h-50">
-                         <div class="test-path"></div>
-                    </div> -->
+                    </a>
+
+                    <a class="letter-block row align-items-center" href="">
+                         <div class="letter-block-content align-items-center">
+                              <div class="d-flex flex-row align-items-center letter-block-content__text">
+                                   <picture>
+                                        <source media="(min-width: 650px)" srcset="/img/icons/letter.svg">
+                                        <img src="/img/icons/letter.png" alt="letter">
+                                   </picture>
+                                   <div class="ml-sm-5 ml-3 d-flex flex-column align-items-start">
+                                        <div class="letter-block__type">Тип сообщения</div>
+                                        <div class="letter-block__title">Некорректный чек</div>
+                                   </div>
+                              </div>
+                              <div class="d-flex flex-row letter-block-content__text">
+                                   <div class="d-flex flex-column align-items-start mr-4">
+                                        <div class="letter-block__date">
+                                             Дата сообщения
+                                        </div>
+                                        <div class="letter-block__date-number">
+                                             19.01.2022
+                                        </div>
+                                   </div>
+                                   <div class="d-flex flex-column align-items-start ml-sm-4 mr-sm-4">
+                                        <div class="letter-block__place">
+                                             Область
+                                        </div>
+                                        <div class="letter-block__place-title">
+                                             г. Минск
+                                        </div>
+                                   </div>
+
+                              </div>
+                         </div>
+
+                         <div class="d-flex align-items-center ml-4">
+                              <i class="bi bi-chevron-right"></i>
+                         </div>
+                    </a>
+
                </section>
+
+               <section class="_container px-4 form-section text-center mt-3">
+                    <div class="justify-content-center align-content-center">
+                         <picture>
+                              <source media="(min-width: 650px)" srcset="./img/appeals/appeals-empty.svg">
+                              <img src="./img/appeals/appeals-empty.png" alt="appeals-empty">
+                         </picture>
+                         <p class="mt-5">
+                              Вы еще не оставилини <br>ни одного обращения
+                         </p>
+                    </div>
+               </section>
+               <!-- <section class="_container px-4 form-section text-center mt-3">
+
+               </section> -->
 
 
           </main>
+
+
+
+          <div class="footer-mobile">
+
+               <div class="footer-mobile-back">
+                    <div class="footer-mobile__content justify-content-center">
+
+                         <div class="d-flex flex-row position-absolute w-100 justify-content-between px-3 px-sm-4">
+                              <div class="d-flex flex-row">
+                                   <a class="footer-mobile__icon" href="">
+                                        <i class="bi bi-envelope"></i>
+                                        <span>Обращения</span>
+                                   </a>
+                                   <a class="footer-mobile__icon" href="">
+                                        <i class="bi bi-receipt"></i>
+                                        <span>Мои чеки</span>
+                                   </a>
+                              </div>
+
+                              <div class="d-flex flex-row">
+                                   <a class="footer-mobile__icon" href="">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Уведомления</span>
+                                   </a>
+                                   <a class="footer-mobile__icon" href="">
+                                        <i class="bi bi-person"></i>
+                                        <span>Профиль</span>
+                                   </a>
+                              </div>
+                         </div>
+
+                         <a class="footer-mobile__circle" href="">
+                              <i class="bi bi-qr-code-scan"></i>
+                         </a>
+                    </div>
+               </div>
+
+          </div>
           <div class="footer-checking mt-5">
                <div class='_container'>
                     <div
@@ -114,24 +204,9 @@
                </div>
           </div>
      </div>
-
-     <div class="modal fade" id="modalChecking" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
-          <div class="modal-checking modal-dialog modal-dialog-centered">
-               <div class="modal-checking__content modal-content">
-                    <button type="button" class="modal-checking__button-close" data-bs-dismiss="modal"
-                         aria-label="Close"><i class="bi bi-x-lg"></i></button>
-                    <div class="modal-checking__img">
-                         <img src="./img/mail-check.png" alt="mail-check" class="img-fluid">
-                    </div>
-                    <div class="w-100 d-flex flex-column align-items-center">
-                         <div class="modal-checking__title">Ваше обращение было успешно отправлено!</div>
-                         <div class="modal-checking__info">Сообщение о нарушении поступит для рассмотрения в налоговые
-                              органы. Спасибо!</div>
-                    </div>
-
-               </div>
-          </div>
      </div>
+
+
      @@include('_js.html',{})
 </body>
 
