@@ -304,6 +304,10 @@ body._lock {
   border-radius: 8px;
   flex-wrap: nowrap;
   cursor: pointer;
+  transition: all ease-in 0.3s;
+}
+.letter-block:hover {
+  box-shadow: 4px 4px 14px -3px rgba(0, 0, 0, 0.2);
 }
 .letter-block__type, .letter-block__date, .letter-block__place, .letter-block__id, .letter-block__num, .letter-block__sum {
   margin-bottom: 4px;
@@ -319,11 +323,6 @@ body._lock {
   .letter-block__title {
     text-align: left;
   }
-}
-.letter-block__id-title {
-  max-width: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .letter-block .letter-block-content {
   display: flex;
@@ -448,11 +447,6 @@ body._lock {
 @media (max-width: 601px) {
   .appeals .footer-checking {
     display: none;
-  }
-}
-@media (max-width: 601px) {
-  .appeals .page {
-    padding-bottom: 150px;
   }
 }
 .appeals .form-container ._container {
