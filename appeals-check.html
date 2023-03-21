@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Обращения</title>
+	<title>Мои чеки</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-     <div class="wrapper appeals">
+     <div class="wrapper appeals appeals-check">
           <header class="header-checking">
                <div class='_container'>
                     <div class="header-checking__body">
@@ -31,9 +31,9 @@
                               </span>
                          </a>
                          <div class="row header-checking__links">
-                              <a href="" class="mx-3  header-checking-active">Главная</a>
+                              <a href="" class="mx-3 ">Главная</a>
                               <a href="" class="mx-3">Обращения</a>
-                              <a href="" class="mx-3">Мои чеки</a>
+                              <a href="" class="mx-3 header-checking-active">Мои чеки</a>
                               <a href="" class="mx-3">Уведомления</a>
                               <a href="" class="mx-3">Профиль</a>
                          </div>
@@ -47,40 +47,41 @@
                     <h1 class="mb-5">Обращения</h1>
 
                     <div class="w-100 d-flex flex-row justify-content-center justify-content-sm-end">
-                         <a class="form-checking-link" href="">Создать обращение</a>
+                         <a class="form-checking-link" href="">Проверить новый чек</a>
                     </div>
                </section>
 
                <div id="particles-js">
                </div>
                <section class="_container px-5 form-section text-center mt-3">
-                    <a class="letter-block row align-items-center mb-4" href="">
+                    <div class="letter-block row align-items-center mb-4 letter-block-success" href="">
                          <div class="letter-block-content align-items-center">
-                              <div class="d-flex flex-row align-items-center letter-block-content__text">
-                                   <picture>
-                                        <source media="(min-width: 650px)" srcset="./img/icons/letter.svg">
-                                        <img src="./img/icons/letter.png" alt="letter">
-                                   </picture>
-                                   <div class="ml-sm-5 ml-3 d-flex flex-column align-items-start">
-                                        <div class="letter-block__type">Тип сообщения</div>
-                                        <div class="letter-block__title">Не найден чек</div>
+                              <div
+                                   class="d-flex flex-row align-items-center letter-block-content__text justify-content-start">
+                                   <i class="bi bi-check-circle-fill"></i>
+                                   <div
+                                        class="ml-sm-5 ml-0 d-flex flex-column align-items-start justify-content-start text-left">
+                                        <div class="letter-block__type">Результат проверки</div>
+                                        <div class="letter-block__title">Чек найден</div>
                                    </div>
                               </div>
-                              <div class="d-flex flex-row letter-block-content__text">
+                              <div class="d-flex flex-column flex-md-row letter-block-content__text">
                                    <div class="d-flex flex-column align-items-start mr-4">
                                         <div class="letter-block__date">
-                                             Дата сообщения
+                                             Дата
                                         </div>
                                         <div class="letter-block__date-number">
                                              19.01.2022
                                         </div>
                                    </div>
-                                   <div class="d-flex flex-column align-items-start ml-sm-4 mr-sm-4">
-                                        <div class="letter-block__place">
-                                             Область
+                                   <div class="d-flex flex-column align-items-start mr-sm-4 mr-4">
+                                        <div class="letter-block__id">
+                                             Уникальный идентификатор
                                         </div>
-                                        <div class="letter-block__place-title">
-                                             г. Минск
+                                        <div class="letter-block__id-title" type="button" data-container="body"
+                                             data-toggle="popover" data-placement="top"
+                                             data-content="e34953f614a8832b11e1de83">
+                                             e34953f614a8832b11e1de83
                                         </div>
                                    </div>
 
@@ -90,30 +91,77 @@
                          <div class="d-flex align-items-center ml-4">
                               <i class="bi bi-chevron-right"></i>
                          </div>
-                    </a>
+                    </div>
 
-                    <a class="letter-block row align-items-center" href="">
+                    <a class="letter-block row align-items-center mb-4 letter-block-danger" href="">
                          <div class="letter-block-content align-items-center">
                               <div class="d-flex flex-row align-items-center letter-block-content__text">
-                                   <picture>
-                                        <source media="(min-width: 650px)" srcset="./img/icons/letter.svg">
-                                        <img src="./img/icons/letter.png" alt="letter">
-                                   </picture>
-                                   <div class="ml-sm-5 ml-3 d-flex flex-column align-items-start">
-                                        <div class="letter-block__type">Тип сообщения</div>
-                                        <div class="letter-block__title">Некорректный чек</div>
+                                   <i class="bi bi-exclamation-triangle-fill"></i>
+                                   <div class="ml-sm-5 ml-0 d-flex flex-column align-items-start">
+                                        <div class="letter-block__type">Результат проверки</div>
+                                        <div class="letter-block__title">Чек не найден (поиск окончен)</div>
                                    </div>
                               </div>
-                              <div class="d-flex flex-row letter-block-content__text">
+                              <div class="d-flex flex-column flex-md-row letter-block-content__text">
                                    <div class="d-flex flex-column align-items-start mr-4">
                                         <div class="letter-block__date">
-                                             Дата сообщения
+                                             Дата
                                         </div>
                                         <div class="letter-block__date-number">
                                              19.01.2022
                                         </div>
                                    </div>
-                                   <div class="d-flex flex-column align-items-start ml-sm-4 mr-sm-4">
+                                   <div class="d-flex flex-column align-items-start mr-sm-4 mr-4">
+                                        <div class="letter-block__num">
+                                             № кассы
+                                        </div>
+                                        <div class="letter-block__num-desk">
+                                             110055317
+                                        </div>
+                                   </div>
+                                   <div class="d-flex flex-column align-items-start mr-sm-4 mr-4">
+                                        <div class="letter-block__num">
+                                             № чека
+                                        </div>
+                                        <div class="letter-block__num-check">
+                                             143714
+                                        </div>
+                                   </div>
+                                   <div class="d-flex flex-column align-items-start mr-sm-4 mr-4">
+                                        <div class="letter-block__sum">
+                                             Сумма
+                                        </div>
+                                        <div class="letter-block__num-check">
+                                             42.95
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="d-flex align-items-center ml-4">
+                              <i class="bi bi-chevron-right"></i>
+                         </div>
+                    </a>
+
+                    <a class="letter-block row align-items-center mb-4 letter-block-warning" href="">
+                         <div class="letter-block-content align-items-center">
+                              <div class="d-flex flex-row align-items-center letter-block-content__text">
+                                   <i class="bi bi-exclamation-triangle-fill"></i>
+                                   <div class="ml-sm-5 ml-0 d-flex flex-column align-items-start">
+                                        <div class="letter-block__type">Результат проверки</div>
+                                        <div class="letter-block__title">Чек находится в обработке</div>
+                                   </div>
+                              </div>
+                              <div class="d-flex flex-column flex-md-row letter-block-content__text">
+                                   <div class="d-flex flex-column align-items-start mr-4">
+                                        <div class="letter-block__date">
+                                             Дата
+                                        </div>
+                                        <div class="letter-block__date-number">
+                                             19.01.2022
+                                        </div>
+                                   </div>
+                                   <div class="d-flex flex-column align-items-start mr-sm-4 mr-4">
                                         <div class="letter-block__place">
                                              Область
                                         </div>
