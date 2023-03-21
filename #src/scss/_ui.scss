@@ -166,20 +166,27 @@
 	border-radius: 8px;
 	flex-wrap: nowrap;
 	cursor: pointer;
-	&__type, &__date, &__place{
+	&__type, &__date, &__place, &__id, &__num, &__sum{
 		margin-bottom: 4px;
 		font-size: 10px;
 		line-height: 12px;
 		color: $color-gray-link;
+		text-align: left;
 	}
 
 	&__type {
 	}
 
 	&__title {
+		text-align: left;
 		@media (max-width: 600px) {
 			text-align: left;
 		}
+	}
+	&__id-title{
+		max-width: 100px;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	&__date {
@@ -206,6 +213,7 @@
 			@media (max-width: 600px) {
 				width: 100%;
 			}
+			
 		}
 		&__text:nth-child(2){
 			@media (max-width: 600px) {
@@ -235,6 +243,7 @@
 		// background: transparent;
 		// background-color: transparent;
 		// box-shadow: 0px -7px 10px 1px rgba(162, 147, 147, 0.07);
+		filter: drop-shadow(0px -7px 10px 1px rgba(162, 147, 147, 0.07));
 		@media (max-width: 600px) {
 			display: block;
 		}
@@ -344,6 +353,88 @@
 	.page{
 		@media (max-width: 601px) {
 			padding-bottom: 150px;
+		}
+	}
+	.form-container ._container{
+		max-width: 1400px;
+	}
+	.header-checking{
+		padding: 25px 0;
+	}
+	._container.form-header{
+		padding: 0 0 !important;
+	}
+}
+
+.appeals-check{
+	.letter-block-content__text{
+		.bi{
+			font-size: 36px;
+			@media (max-width: 580px) {
+				display: none;
+			}
+		}
+		.letter-block__title{
+			font-weight: 700;
+		}
+	}
+	.letter-block-content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		@media (max-width: 600px) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		&__text{
+			@media (max-width: 600px) {
+				width: 100%;
+			}
+			max-width: 500px;
+			width: 100%;
+			justify-content: flex-start;
+		}
+		&__text:nth-child(2){
+			@media (max-width: 600px) {
+				margin-top: 23px;
+			}
+		}
+	}
+}
+
+.letter-block-success{
+	border-left: 5px solid #4CAF50;
+	.letter-block__title{
+		color: #4CAF50;
+	}
+	.letter-block-content__text{
+		.bi{
+			color: #4CAF50;
+		}
+	}
+}
+
+.letter-block-danger{
+	border-left: 5px solid #EB5757;
+	.letter-block__title{
+		color: #EB5757;
+	}
+	.letter-block-content__text{
+		.bi{
+			color: #EB5757;
+		}
+	}
+}
+
+.letter-block-warning{
+	border-left: 5px solid #F18D42;
+	.letter-block__title{
+		color: #F18D42;
+	}
+	.letter-block-content__text{
+		.bi{
+			color: #F18D42;
 		}
 	}
 }

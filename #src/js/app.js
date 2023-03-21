@@ -356,3 +356,9 @@ function resetMSG(){
 function uploadFile(target) {
 	document.getElementById("file-name").innerHTML = target.files[0].name;
 }
+
+$(function () {
+	$('[data-toggle="popover"]').popover()
+})
+
+$("[data-toggle=popover]").popover();
