@@ -166,6 +166,10 @@
 	border-radius: 8px;
 	flex-wrap: nowrap;
 	cursor: pointer;
+	transition: all ease-in .3s;
+	&:hover{
+		box-shadow: 4px 4px 14px -3px rgba(0, 0, 0, 0.2);
+	}
 	&__type, &__date, &__place, &__id, &__num, &__sum{
 		margin-bottom: 4px;
 		font-size: 10px;
@@ -184,9 +188,9 @@
 		}
 	}
 	&__id-title{
-		max-width: 100px;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		// max-width: 100px;
+		// overflow: hidden;
+		// text-overflow: ellipsis;
 	}
 
 	&__date {
@@ -350,11 +354,11 @@
 			display: none;
 		}
 	}
-	.page{
-		@media (max-width: 601px) {
-			padding-bottom: 150px;
-		}
-	}
+	// .page{
+	// 	@media (max-width: 601px) {
+	// 		padding-bottom: 150px;
+	// 	}
+	// }
 	.form-container ._container{
 		max-width: 1400px;
 	}
