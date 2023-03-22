@@ -188,10 +188,13 @@
 		}
 	}
 	&__id-title{
-		// max-width: 100px;
-		// overflow: hidden;
-		// text-overflow: ellipsis;
+		@media (max-width: 600px) {
+			max-width: 100px;
+			overflow: hidden;
+			text-overflow: ellipsis;
 	}
+		}
+		
 
 	&__date {
 	}
@@ -265,12 +268,26 @@
 			cursor: pointer;
 			margin-left: 4px;
 			// box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.4);
+			animation: pulse-orange 2s infinite;
 			.bi-qr-code-scan{
 				// @include adaptiv-value('font-size', 36, 32, 1);
 				// @include adaptiv-value('line-height', 36, 32, 1);
 				font-size: 36px;
 				line-height: 36px;
 				color: $color-white-classic;
+			}
+			@keyframes pulse-orange {
+				0% {
+					box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+				}
+				
+				70% {
+					box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+				}
+				
+				100% {
+					box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+				}
 			}
 		}
 		&__icon{
@@ -440,6 +457,77 @@
 		.bi{
 			color: #F18D42;
 		}
+	}
+}
+
+.check-nav-wrapper{
+	display: flex;
+	align-items: center;
+	color: $color-gray-link;
+	cursor: pointer;
+	&__icon{
+		display: flex;
+		align-items: center;
+	}
+	.bi{
+		font-size: 20px;
+	}
+}
+
+.check-nav-wrapper:not(.check-nav-wrapper-trash){
+	transition: all .3s;
+	.check-nav-wrapper__icon{
+		background: $color-beige;
+		width: 46px;
+		height: 46px;
+		display: grid;
+		place-items: center;
+		border-radius: 50%;
+		border: 1px solid $color-gray-link;
+		transition: all .3s;
+		&:hover{
+			border: 1px solid $color-gold-link;
+			color: $color-gold-link;
+		}
+		margin-right: 16px;
+	}
+	&:hover .check-nav-wrapper__icon{
+		border: 1px solid $color-gold-link;
+		color: $color-gold-link;
+	}
+	&:hover{
+		color: $color-gold-link;
+	}
+	@media (max-width: 600px) {
+		span{
+			display: none;
+		}
+	}
+}
+
+.check-nav-wrapper-trash{
+	border: 1px solid $color-gray-link;
+	padding: 10px 22px;
+	transition: all .3s;
+	border-radius: 8px;
+	&:hover{
+		border: 1px solid $color-gold-link;
+		color: $color-gold-link;
+	}
+	span{
+		margin-left: 8px;
+		font-weight: 600;
+	}
+	@media (max-width: 600px) {
+		span{
+			display: none;
+		}
+		padding: 12px 12px;
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		background: $color-beige;
+		
 	}
 }
 
