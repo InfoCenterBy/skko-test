@@ -324,6 +324,11 @@ body._lock {
     text-align: left;
   }
 }
+.letter-block__id-title {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .letter-block .letter-block-content {
   display: flex;
   flex-direction: row;
