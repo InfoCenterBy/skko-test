@@ -619,6 +619,28 @@ body._lock {
   }
 }
 
+.enter-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #F18D42;
+  padding: 0 50px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #F18D42;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+.enter-btn .bi {
+  margin-right: 9px;
+}
+.enter-btn:hover {
+  color: #FFFFFF;
+  background: #F18D42;
+}
+
 .slider-advertising-banners {
   margin: 0px 0px 90px 0px;
   background-color: #F6F6F6;
