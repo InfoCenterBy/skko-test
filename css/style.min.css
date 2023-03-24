@@ -732,6 +732,10 @@ body._lock {
   color: #EB5757;
 }
 
+.check-status-warninng > .bi {
+  color: #F18D42;
+}
+
 .check-full {
   color: #333333;
   background: #FFFFFF;
