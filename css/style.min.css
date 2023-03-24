@@ -620,18 +620,11 @@ body._lock {
 }
 
 .enter-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   border: 1px solid #F18D42;
-  padding: 0 50px;
-  font-size: 18px;
-  line-height: 20px;
   font-weight: 600;
   color: #F18D42;
-  margin: 10px 0;
-  border-radius: 8px;
+  max-width: 184px;
+  width: 100%;
 }
 .enter-btn .bi {
   margin-right: 9px;
@@ -639,6 +632,38 @@ body._lock {
 .enter-btn:hover {
   color: #FFFFFF;
   background: #F18D42;
+}
+
+.enter-btn-send {
+  background: #F18D42;
+  color: #FCFCFC;
+  max-width: 306px;
+  width: 100%;
+}
+.enter-btn-send:hover {
+  color: #FCFCFC;
+}
+
+.enter-btn, .enter-btn-send {
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px 5px;
+}
+@media (max-width: 1440px) {
+  .enter-btn, .enter-btn-send {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1120));
+  }
+}
+@media (max-width: 650px) {
+  .enter-btn, .enter-btn-send {
+    padding: 10px 5px;
+  }
 }
 
 .check-status__title {
@@ -694,9 +719,17 @@ body._lock {
   display: grid;
   place-items: center;
 }
+.check-status p {
+  max-width: 560px;
+  color: #9E9E9E;
+}
 
 .check-status-success > .bi {
   color: #4CAF50;
+}
+
+.check-status-danger > .bi {
+  color: #EB5757;
 }
 
 .check-full {
@@ -1812,19 +1845,8 @@ main section {
 
 @media (max-width: 610px) {
   .logo-checking {
-    width: 100%;
     justify-content: space-between;
     text-align: right;
-  }
-
-  .header-checking .logo-checking__name {
-    display: block;
-    font-size: 16px;
-  }
-}
-@media (max-width: 610px) and (max-width: 1440px) {
-  .header-checking .logo-checking__name {
-    font-size: calc(10px + 6 * ((100vw - 320px) / 1120));
   }
 }
 .logo-checking {
