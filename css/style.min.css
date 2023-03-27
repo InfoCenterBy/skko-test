@@ -703,7 +703,7 @@ body._lock {
   font-size: 16px;
   line-height: 16px;
 }
-.check-status__link span {
+.check-status__link span, .check-status__link a {
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
