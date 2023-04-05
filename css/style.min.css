@@ -359,42 +359,39 @@ body._lock {
 
 .appeals .footer-mobile {
   position: fixed;
-  bottom: -5px;
-  height: 100px;
+  bottom: 0px;
+  height: 86px;
   width: 100%;
   z-index: 17;
   display: none;
   padding-bottom: env(safe-area-inset-bottom);
-  filter: drop-shadow(0px -7px 10px 1px rgba(162, 147, 147, 0.07));
+  box-shadow: 0px -7px 10px 1px rgba(162, 147, 147, 0.07);
+  background-color: #FFFFFF;
+  border-radius: 8px 8px 0px 0px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 11px 0 17px 0;
 }
 @media (max-width: 600px) {
   .appeals .footer-mobile {
-    display: block;
+    display: flex;
   }
 }
 .appeals .footer-mobile__circle {
-  width: 72px;
-  height: 72px;
-  bottom: 50px;
-  background: #FFFFFF;
+  width: 58px;
+  height: 58px;
+  background: #F18D42;
   border-radius: 50%;
-  position: relative;
   display: grid;
   place-items: center;
   cursor: pointer;
-  margin-left: 4px;
   animation: pulse-orange 2s infinite;
-  border: 1px solid #D9D9D9;
-}
-@media (max-width: 1440px) {
-  .appeals .footer-mobile__circle {
-    bottom: calc(35px + 15 * ((100vw - 320px) / 1120));
-  }
 }
 .appeals .footer-mobile__circle .bi-qr-code-scan {
-  font-size: 36px;
-  line-height: 36px;
-  color: #F18D42;
+  font-size: 29px;
+  line-height: 29px;
+  color: #FFFFFF;
 }
 @keyframes pulse-orange {
   0% {
@@ -433,37 +430,6 @@ body._lock {
 .appeals .footer-mobile__icon-wrapper {
   position: absolute;
   width: 100%;
-}
-.appeals .footer-mobile__icon:nth-child(1) {
-  margin-right: 56px;
-}
-@media (max-width: 1440px) {
-  .appeals .footer-mobile__icon:nth-child(1) {
-    margin-right: calc(12px + 44 * ((100vw - 320px) / 1120));
-  }
-}
-@media (max-width: 340px) {
-  .appeals .footer-mobile__icon:nth-child(1) {
-    margin-right: 36px;
-  }
-}
-.appeals .footer-mobile__content {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.appeals .footer-mobile .footer-mobile-back {
-  width: 100%;
-  height: 110%;
-  display: flex;
-  justify-content: center;
-  border-radius: 8px 8px 0px 0px;
-  background-image: url("../img/appeals/mobile-back.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
 }
 @media (max-width: 601px) {
   .appeals .footer-checking {
