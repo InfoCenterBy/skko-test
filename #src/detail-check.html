@@ -29,7 +29,7 @@
           <main class="page form-container mt-5">
 
                <section class="_container px-3 text-center form-header mb-3">
-                    <div class="d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-row justify-content-between px-3 px-md-0">
                          <div class="check-nav-wrapper">
                               <div class="check-nav-wrapper__icon">
                                    <i class="bi bi-chevron-left"></i>
@@ -44,59 +44,193 @@
                          </div>
                     </div>
 
-                    <h1 class="mb-5">Детализация чека</h1>
+                    <h1 class="mb-5 mt-3">Детализация чека</h1>
 
 
                </section>
 
                <div id="particles-js">
                </div>
-               <section class="_container px-5 form-section text-center mt-3">
+               <section
+                    class="_container px-5 form-section text-center mt-3 d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex flex-column check-status check-status-success justify-content-center">
+                         <i class="bi bi-check-circle-fill"></i>
+                         <span class="check-status__title mt-3">Платежный документ найден</span>
+                         <div class="check-status__links-wrapper mt-4">
+                              <a class="check-status__link" href="">
+                                   <div class="check-status__cirlce">
+                                        <i class="bi bi-download"></i>
+                                   </div>
+                                   <span>Скачать <br> чек</span>
+                              </a>
+                              <a class="check-status__link check-status__link-disabled" href="#" id="blog-share" data-title="Ваш Чек"
+                                   data-text="Описание Чека" data-url="https://example.com/">
+                                   <div class="check-status__cirlce">
+                                        <i class="bi bi-share"></i>
+                                   </div>
 
+                                   <span>Поделиться <br> чеком</span>
+
+                              </a>
+                              <a class="check-status__link" href="">
+                                   <div class="check-status__cirlce">
+                                        <i class="bi bi-envelope-at"></i>
+                                   </div>
+                                   <span>Отправить <br> по e-mail</span>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="check-full mt-5">
+                         <div class="check-full__title">
+                              Визуализация платежного документа
+                         </div>
+                         <div class="check-full__num">
+                              <span>УИ</span> 12345678901234567890123
+                         </div>
+                         <div class="check-full__divider"></div>
+                         <div class="check-full__title-main">
+                              <span>ООО</span> “Евроторг”
+                         </div>
+                         <div class="check-full__num-main">
+                              <span>УНП</span> 101168731
+                         </div>
+                         <div class="check-full__divider"></div>
+                         <div class="check-full__shop">
+                              Магазин “Санта-270”
+                         </div>
+                         <div class="check-full__address">
+                              г. Минск, пр-т Дзержинского, 106-1
+                         </div>
+                         <div class="check-details w-100">
+                              <div class="check-details__text">
+                                   <span>Рег. №</span>
+                                   <span>110123456</span>
+                              </div>
+                              <div class="check-details__text">
+                                   <span>Зав. №</span>
+                                   <span>ТБ0005386</span>
+                              </div>
+                              <div class="check-details__text">
+                                   <span>Кассир</span>
+                                   <span>Иванов Иван Иванович</span>
+                              </div>
+                              <div class="check-details__text">
+                                   <span>Валюта</span>
+                                   <span>BYN</span>
+                              </div>
+                         </div>
+                         <div class="check-full__date-num w-100 d-flex justify-content-between">
+                              <span>№123456</span>
+                              <span>9 сентября 2022 20:41:59</span>
+                         </div>
+                         <div class="check-cart">
+                              <table>
+                                   <tr>
+                                        <td>Товар</td>
+                                        <td>Кол-во</td>
+                                        <td>Сумма продажи</td>
+                                        <td>Сумма скидки/наценки</td>
+                                   </tr>
+                                   <tr>
+                                        <td>1234567890123</td>
+                                        <td>1</td>
+                                        <td>2,29</td>
+                                        <td>0,00</td>
+                                   </tr>
+                                   <tr>
+                                        <td>1234567890123</td>
+                                        <td>1</td>
+                                        <td>2,29</td>
+                                        <td>0,00</td>
+                                   </tr>
+                              </table>
+                         </div>
+                         <div class="check-full__divider"></div>
+                         <div class="check-full__total w-100">
+                              <div class="check-full__total-main">
+                                   <span>Итого:</span>
+                                   <span>4,58</span>
+                              </div>
+                              <div class="check-full__total-text">
+                                   <span>Размер скидки</span>
+                                   <span>0,00</span>
+                              </div>
+                              <div class="check-full__total-text">
+                                   <span>Итого к оплате</span>
+                                   <span>4,58</span>
+                              </div>
+                              <div class="check-full__total-text">
+                                   <span>Наличными</span>
+                                   <span>4,58</span>
+                              </div>
+                              <div class="check-full__total-text">
+                                   <span>Безналичными</span>
+                                   <span>0,00</span>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+               <section
+                    class="_container px-5 form-section text-center mt-3 d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex flex-column check-status check-status-danger justify-content-center">
+                         <i class="bi bi-exclamation-triangle-fill"></i>
+                         <span class="check-status__title mt-3">Информация о платежном документе по запросу от хх.хх.хх
+                              г. не найдена.</span>
+                         <p class="mt-3">В случае отсутствия чека в системе контроля кассового оборудования (СККО) в
+                              течение
+                              длительного времени (более трех месяцев) или его невыдачи вы можете сообщите об этом в
+                              налоговые органы Республики Беларусь, отправив обращение.
+                         </p>
+                         <div class="w-100 d-flex flex-row justify-content-center">
+                              <a href="" class="enter-btn-send">
+                                   Отправить обращение
+                              </a>
+                         </div>
+
+                    </div>
                </section>
 
+               <section
+                    class="_container px-5 form-section text-center mt-3 d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex flex-column check-status check-status-warninng justify-content-center">
+                         <i class="bi bi-exclamation-triangle-fill"></i>
+                         <span class="check-status__title mt-3">Информация о платежном документе по запросу от хх.хх.хх
+                              г. не найдена.</span>
+                         <p class="mt-3">В соответствии с действующим законодательством информация о платежных
+                              документах может поступать в СККО с задержкой до 7 дней.
+                              По истечении 7 дней вы получите уведомление о результате проверки.
+                         </p>
 
+                    </div>
+               </section>
 
           </main>
 
 
 
           <div class="footer-mobile">
+               <a class="footer-mobile__icon" href="">
+                    <i class="bi bi-envelope"></i>
+                    <span>Обращения</span>
+               </a>
+               <a class="footer-mobile__icon" href="">
+                    <i class="bi bi-receipt"></i>
+                    <span>Мои чеки</span>
+               </a>
 
-               <div class="footer-mobile-back">
-                    <div class="footer-mobile__content justify-content-center">
-
-                         <div class="d-flex flex-row position-absolute w-100 justify-content-between px-3 px-sm-4">
-                              <div class="d-flex flex-row">
-                                   <a class="footer-mobile__icon" href="">
-                                        <i class="bi bi-envelope"></i>
-                                        <span>Обращения</span>
-                                   </a>
-                                   <a class="footer-mobile__icon" href="">
-                                        <i class="bi bi-receipt"></i>
-                                        <span>Мои чеки</span>
-                                   </a>
-                              </div>
-
-                              <div class="d-flex flex-row">
-                                   <a class="footer-mobile__icon" href="">
-                                        <i class="bi bi-bell"></i>
-                                        <span>Уведомления</span>
-                                   </a>
-                                   <a class="footer-mobile__icon" href="">
-                                        <i class="bi bi-person"></i>
-                                        <span>Профиль</span>
-                                   </a>
-                              </div>
-                         </div>
-
-                         <a class="footer-mobile__circle" href="">
-                              <i class="bi bi-qr-code-scan"></i>
-                         </a>
-                    </div>
-               </div>
-
+               <a class="footer-mobile__circle" href="">
+                    <i class="bi bi-qr-code-scan"></i>
+               </a>
+               <a class="footer-mobile__icon" href="">
+                    <i class="bi bi-bell"></i>
+                    <span>Уведомления</span>
+               </a>
+               <a class="footer-mobile__icon" href="">
+                    <i class="bi bi-person"></i>
+                    <span>Профиль</span>
+               </a>
           </div>
+
           <div class="footer-checking mt-5">
                <div class='_container'>
                     <div

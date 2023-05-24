@@ -323,7 +323,38 @@ const showModal = ( type, srcImg = '') => {
 	$("#modalChecking").modal("show");
 }
 
-particlesJS("particles-js", 
+
+
+function resetMSG(){
+	document.querySelector("#form-msg").reset();
+	document.getElementById("file-name").innerHTML = "Прикрепить изображение";
+}
+
+function uploadFile(target) {
+	document.getElementById("file-name").innerHTML = target.files[0].name;
+}
+
+$(function () {
+	$('[data-toggle="popover"]').popover()
+})
+
+$("[data-toggle=popover]").popover();
+
+
+$(document).ready(function() {
+	if (navigator.share) {
+		button = $('#blog-share')
+		button.show().on('click', function () {
+			navigator.share({
+				text: $(this).data('text'),
+			})
+			return false
+		})
+	} 
+})
+
+try{
+	particlesJS("particles-js", 
 {"particles":
 {"number":
 {"value":5,"density":
@@ -347,18 +378,7 @@ particlesJS("particles-js",
 	"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}
 }},
 	"retina_detect":true});var count_particles, update; 
-
-function resetMSG(){
-	document.querySelector("#form-msg").reset();
-	document.getElementById("file-name").innerHTML = "Прикрепить изображение";
 }
-
-function uploadFile(target) {
-	document.getElementById("file-name").innerHTML = target.files[0].name;
+catch(error){
+	console.log('particlesJS', error)
 }
-
-$(function () {
-	$('[data-toggle="popover"]').popover()
-})
-
-$("[data-toggle=popover]").popover();

@@ -61,13 +61,12 @@ main{
 }
 @media (max-width: 610px) {
   .logo-checking{
-    width: 100%;
     justify-content: space-between;
     text-align: right;
   }
   .header-checking .logo-checking__name{
-    display: block;
-    @include adaptiv-value('font-size', 16, 10, 1);
+    // display: block;
+    // @include adaptiv-value('font-size', 16, 10, 1);
   }
 }
 
