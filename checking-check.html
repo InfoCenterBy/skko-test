@@ -20,6 +20,25 @@
 </head>
 
 <body>
+	<div class="modal fade" id="modalCheckFalse" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
+          <div class="modal-checking modal-dialog modal-dialog-centered">
+               <div class="modal-checking__content modal-content">
+                    <button type="button" class="modal-checking__button-close" data-bs-dismiss="modal"
+                         aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                    <div class="modal-checking__img">
+                         <img src="./img/appeals/appeals-empty.png" alt="mail-check" class="img-fluid">
+                    </div>
+                    <div class="w-100 d-flex flex-column align-items-center">
+                         <div class="modal-checking__title">Сообщить о нарушении могут только авторизированные пользователи!</div>
+					<div class="form-checking__button d-flex justify-content-center mt-2">
+						<button>
+							Авторизоваться
+						</button>
+					</div>
+                    </div>
+               </div>
+          </div>
+     </div>
 	<div class="wrapper">
 		<header class="header-checking">
 			<div class='_container'>
@@ -31,7 +50,8 @@
 						</span>
 					</a>
 					<div class="form-checking__button ml-3">
-						<button type="button" onclick="location.href='/checking-form.html';">Создать
+						<button type="button" data-bs-toggle="modal"
+						data-bs-target="#modalCheckFalse">Создать
 							обращение</button>
 					</div>
 				</div>
