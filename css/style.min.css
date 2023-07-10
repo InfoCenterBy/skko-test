@@ -817,6 +817,39 @@ body._lock {
   font-weight: 600;
 }
 
+.alert-massage {
+  display: flex;
+  background-color: #FCFCFC;
+  border: 1px solid #d9d9d9;
+  padding: 15px;
+  border-radius: 16px;
+  align-items: flex-start;
+}
+.alert-massage svg {
+  max-width: 132px;
+  max-height: 116px;
+  min-width: 32px;
+  width: auto;
+  height: auto;
+}
+.alert-massage b {
+  color: #c47a2c;
+  font-size: 22px;
+}
+@media (max-width: 1440px) {
+  .alert-massage b {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 1120));
+  }
+}
+.alert-massage p {
+  font-size: 16px;
+}
+@media (max-width: 1440px) {
+  .alert-massage p {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
+  }
+}
+
 .slider-advertising-banners {
   margin: 0px 0px 90px 0px;
   background-color: #F6F6F6;
