@@ -245,7 +245,7 @@
                                              форму</span> </button>
                               </div>
                          </div>
-
+                         modalCheckFalse
                     </form>
                </section>
                <section class="_container px-4 form-section text-center mt-5">
@@ -310,6 +310,7 @@
                          </div>
                     </form>
                </section>
+               
           </main>
           <div class="footer-checking mt-5">
                <div class='_container'>
@@ -356,7 +357,23 @@
                          <div class="modal-checking__info">Сообщение о нарушении поступит для рассмотрения в налоговые
                               органы. Спасибо!</div>
                     </div>
+               </div>
+          </div>
+     </div>
 
+     <div class="modal fade" id="modalCheckFalse" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
+          <div class="modal-checking modal-dialog modal-dialog-centered">
+               <div class="modal-checking__content modal-content">
+                    <button type="button" class="modal-checking__button-close" data-bs-dismiss="modal"
+                         aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                    <div class="modal-checking__img">
+                         <img src="./img/mail-check.png" alt="mail-check" class="img-fluid">
+                    </div>
+                    <div class="w-100 d-flex flex-column align-items-center">
+                         <div class="modal-checking__title">Ваше обращение было успешно отправлено!</div>
+                         <div class="modal-checking__info">Сообщение о нарушении поступит для рассмотрения в налоговые
+                              органы. Спасибо!</div>
+                    </div>
                </div>
           </div>
      </div>

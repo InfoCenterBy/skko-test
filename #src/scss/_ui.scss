@@ -167,6 +167,9 @@
 	flex-wrap: nowrap;
 	cursor: pointer;
 	transition: all ease-in .3s;
+	@media (max-width: 650px) {
+		padding: 8px;
+	}
 	&:hover{
 		box-shadow: 4px 4px 14px -3px rgba(0, 0, 0, 0.2);
 	}
@@ -730,6 +733,29 @@
 				font-weight: 600;
 			}
 		}
+	}
+}
+
+.alert-massage{
+	display: flex;
+	background-color: $color-white;
+	border: 1px solid #d9d9d9;
+	padding: 15px;
+	border-radius: 16px;
+	align-items: flex-start;
+	svg{
+		max-width: 132px;
+		max-height: 116px;
+		min-width: 32px;
+		width: auto;
+		height: auto;
+	}
+	b{
+		color: $color-gold;
+		@include adaptiv-value('font-size', 22, 16, 1);
+	}
+	p{
+		@include adaptiv-value('font-size', 16, 14, 1);
 	}
 }
 
